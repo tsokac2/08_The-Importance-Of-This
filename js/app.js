@@ -1,11 +1,12 @@
 var xhr = new XMLHttpRequest();
-
+var data;
 xhr.open("GET", "https://ci-swapi.herokuapp.com/api/");
 xhr.send();
 
 xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("data").innerHTML = this.responseText;
+        // document.getElementById("data").innerHTML = this.responseText; // returns a string
+        // console.log(JSON.parse(this.responseText)); // returns JSON to the console
     }
 };
 
